@@ -9,6 +9,8 @@ export default function Dictionary() {
    console.log(response.data[0]);
   }
 
+  //https://dictionaryapi.dev/
+  
   function search (event){
     event.preventDefault();
     alert(`Explore the meaning of ${keyword}`);
