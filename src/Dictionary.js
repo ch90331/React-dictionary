@@ -5,9 +5,11 @@ import Results from "./Results";
 
 export default function Dictionary() {
   let [keyword,setKeyword]=useState("");
+  let [results,setResults]=useState(null);
 
   function displayResponse(response){
    console.log(response.data[0]);
+   setResults(response.data[0]);
   }
 
   //https://dictionaryapi.dev/
@@ -29,6 +31,6 @@ export default function Dictionary() {
    <form onSubmit={search}>
      <input type="search" onChange={showKeyword}/>
    </form>
-   <Results/>
+   <Results result={results}/>
   </div>
 }
